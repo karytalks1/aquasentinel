@@ -82,6 +82,7 @@ src/simulate.py       EPANET leak sensitivity matrix
 src/localize.py       fingerprint matching to zones
 src/experiments.py    full study -> reports/tables/*.csv
 src/figures.py        all report figures
+src/export_gis.py     network, zones, sensors, leaks -> gis/ for ArcGIS or QGIS
 app.py                Streamlit dashboard
 reports/REPORT.md     write-up with results and limitations
 ```
