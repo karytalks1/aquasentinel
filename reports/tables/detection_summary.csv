@@ -1,0 +1,3 @@
+year,role,leaks,detected,detection_rate,false_alarms,median_delay_days,mnf_detected,mnf_detection_rate,mnf_false_alarms,mnf_median_delay_days
+2018,development,14,13,0.9286,4,21.0,1,0.0714,0,39.0
+2019,held-out test,19,17,0.8947,0,14.0,1,0.0526,0,30.0

@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Raw dataset (~200 MB) - re-fetch with: python src/download_data.py
+data/raw/
+
+# Derived caches - regenerate with: python run_all.py
+data/processed/
+
+# EPANET scratch files
+temp.bin
+temp.inp
+temp.rpt
+*.rpt

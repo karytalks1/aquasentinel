@@ -1,0 +1,185 @@
+{
+  "detector_params": {
+    "k": 1.0,
+    "h": 4,
+    "refractory_days": 14
+  },
+  "detection": [
+    {
+      "year": 2018,
+      "role": "development",
+      "leaks": 14,
+      "detected": 13,
+      "detection_rate": 0.9286,
+      "false_alarms": 4,
+      "median_delay_days": 21.0,
+      "mnf_detected": 1,
+      "mnf_detection_rate": 0.0714,
+      "mnf_false_alarms": 0,
+      "mnf_median_delay_days": 39.0
+    },
+    {
+      "year": 2019,
+      "role": "held-out test",
+      "leaks": 19,
+      "detected": 17,
+      "detection_rate": 0.8947,
+      "false_alarms": 0,
+      "median_delay_days": 14.0,
+      "mnf_detected": 1,
+      "mnf_detection_rate": 0.0526,
+      "mnf_false_alarms": 0,
+      "mnf_median_delay_days": 30.0
+    }
+  ],
+  "localisation": [
+    {
+      "year": 2018,
+      "subset": "all",
+      "n": 12,
+      "top1": 0.5833,
+      "top3": 0.5833,
+      "median_zone_rank": 1.0,
+      "median_dist_m": 324.1,
+      "random_top1": 0.0833
+    },
+    {
+      "year": 2018,
+      "subset": "abrupt",
+      "n": 6,
+      "top1": 1.0,
+      "top3": 1.0,
+      "median_zone_rank": 1.0,
+      "median_dist_m": 203.25,
+      "random_top1": 0.0833
+    },
+    {
+      "year": 2018,
+      "subset": "incipient",
+      "n": 6,
+      "top1": 0.1667,
+      "top3": 0.1667,
+      "median_zone_rank": 6.0,
+      "median_dist_m": 1078.1,
+      "random_top1": 0.0833
+    },
+    {
+      "year": 2019,
+      "subset": "all",
+      "n": 19,
+      "top1": 0.3684,
+      "top3": 0.5263,
+      "median_zone_rank": 3.0,
+      "median_dist_m": 518.3,
+      "random_top1": 0.0833
+    },
+    {
+      "year": 2019,
+      "subset": "abrupt",
+      "n": 9,
+      "top1": 0.4444,
+      "top3": 0.5556,
+      "median_zone_rank": 2.0,
+      "median_dist_m": 443.2,
+      "random_top1": 0.0833
+    },
+    {
+      "year": 2019,
+      "subset": "incipient",
+      "n": 10,
+      "top1": 0.3,
+      "top3": 0.5,
+      "median_zone_rank": 3.5,
+      "median_dist_m": 560.95,
+      "random_top1": 0.0833
+    }
+  ],
+  "sensor_ablation": [
+    {
+      "n_sensors": 5,
+      "detection_rate": 0.9789,
+      "false_alarms": 1.8,
+      "median_delay_days": 15.8,
+      "localisation_top1": 0.1789
+    },
+    {
+      "n_sensors": 10,
+      "detection_rate": 1.0,
+      "false_alarms": 2.6,
+      "median_delay_days": 12.2,
+      "localisation_top1": 0.2
+    },
+    {
+      "n_sensors": 15,
+      "detection_rate": 1.0,
+      "false_alarms": 3.6,
+      "median_delay_days": 10.2,
+      "localisation_top1": 0.2737
+    },
+    {
+      "n_sensors": 20,
+      "detection_rate": 1.0,
+      "false_alarms": 3.2,
+      "median_delay_days": 12.6,
+      "localisation_top1": 0.2842
+    },
+    {
+      "n_sensors": 25,
+      "detection_rate": 0.9579,
+      "false_alarms": 1.6,
+      "median_delay_days": 13.6,
+      "localisation_top1": 0.3053
+    },
+    {
+      "n_sensors": 33,
+      "detection_rate": 0.8947,
+      "false_alarms": 0.0,
+      "median_delay_days": 14.0,
+      "localisation_top1": 0.3684
+    }
+  ],
+  "zone_ablation": [
+    {
+      "n_zones": 6,
+      "top1": 0.4211,
+      "top3": 0.8421,
+      "random_top1": 0.1667,
+      "mean_zone_length_km": 7.18
+    },
+    {
+      "n_zones": 8,
+      "top1": 0.4211,
+      "top3": 0.6316,
+      "random_top1": 0.125,
+      "mean_zone_length_km": 5.38
+    },
+    {
+      "n_zones": 10,
+      "top1": 0.2632,
+      "top3": 0.5789,
+      "random_top1": 0.1,
+      "mean_zone_length_km": 4.31
+    },
+    {
+      "n_zones": 12,
+      "top1": 0.3684,
+      "top3": 0.5263,
+      "random_top1": 0.0833,
+      "mean_zone_length_km": 3.59
+    },
+    {
+      "n_zones": 16,
+      "top1": 0.1579,
+      "top3": 0.5263,
+      "random_top1": 0.0625,
+      "mean_zone_length_km": 2.69
+    },
+    {
+      "n_zones": 20,
+      "top1": 0.3684,
+      "top3": 0.4737,
+      "random_top1": 0.05,
+      "mean_zone_length_km": 2.15
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+pipe,kind,diameter_mm,day_used,true_zone,pred_zone,zone_rank,top1,top3,pred_pipe,dist_m
+p232,incipient,20.1,2018-01-31,6,2,4,False,False,p653,340.9
+p427,incipient,9.1,2018-02-13,6,11,11,False,False,p849,1444.9
+p673,abrupt,22.9,2018-03-05,4,4,1,True,True,p160,209.8
+p628,incipient,22.3,2018-05-02,2,7,4,False,False,p113,716.5
+p538,abrupt,21.7,2018-05-18,7,7,1,True,True,p849,2311.9
+p866,abrupt,18.1,2018-06-01,11,11,1,True,True,p837,124.4
+p31,incipient,16.4,2018-06-28,1,11,8,False,False,p837,2214.1
+p654,incipient,8.8,2018-07-05,2,11,11,False,False,p837,1439.7
+p810,incipient,10.0,2018-07-28,5,5,1,True,True,p859,307.3
+p183,abrupt,15.9,2018-08-07,5,5,1,True,True,p861,268.2
+p158,abrupt,19.4,2018-10-06,0,0,1,True,True,p705,40.2
+p369,abrupt,19.4,2018-10-26,8,8,1,True,True,p351,196.7
