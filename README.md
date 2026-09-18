@@ -19,6 +19,8 @@ Localisation to 1 of 12 zones: **37% top-1** (random: 8%) and **53% top-3**
 Localisation is scored on each leak's true start day, so it measures the
 fingerprint matching on its own, separately from how quickly the detector fires.
 
+![Zones and 2019 leak results](reports/figures/11_zone_map_gis.png)
+
 ## Quick start
 
 ```bash
