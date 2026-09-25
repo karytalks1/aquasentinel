@@ -4,9 +4,13 @@ __pycache__/
 
 # Raw dataset (~200 MB) - re-fetch with: python src/download_data.py
 data/raw/
+# ...except the two small files the dashboard needs to run in the cloud
+!data/raw/L-TOWN.inp
+!data/raw/dataset_configuration.yaml
 
-# Derived caches - regenerate with: python run_all.py
-data/processed/
+# Derived caches - regenerate with: python run_all.py, but keep them so the
+# deployed dashboard works without the raw dataset
+!data/processed/
 
 # EPANET scratch files
 temp.bin

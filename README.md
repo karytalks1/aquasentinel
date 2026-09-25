@@ -48,6 +48,17 @@ Then launch the dashboard:
 The first run computes residuals and simulates a leak on all 902 pipes
 (~15 minutes total); everything is cached to `data/processed/` afterwards.
 
+## Deployed dashboard
+
+The Streamlit app runs from the cached results committed here (residuals, the EPANET
+sensitivity matrix, the network file), so it needs no raw data:
+
+```bash
+streamlit run app.py
+```
+
+Streamlit Community Cloud: New app -> this repo -> `app.py` -> Deploy.
+
 ## How it works
 
 **1. Expected-pressure model.** A Ridge regression predicts each of the 33 sensor
