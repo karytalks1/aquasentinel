@@ -28,15 +28,28 @@ def load_model():
 
 @functools.lru_cache(maxsize=1)
 def node_coords() -> pd.DataFrame:
+    """Junction coordinates, read from cache so the dashboard needs no solver."""
+    cache = C.PROCESSED / "node_coords.csv"
+    if cache.exists():
+        return pd.read_csv(cache, index_col=0)
+
     wn = load_model()
     names = wn.junction_name_list
     xy = np.array([wn.get_node(n).coordinates for n in names])
-    return pd.DataFrame(xy, index=names, columns=["x", "y"])
+    df = pd.DataFrame(xy, index=names, columns=["x", "y"])
+    df.index.name = "node"
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(cache)
+    return df
 
 
 @functools.lru_cache(maxsize=1)
 def pipe_table() -> pd.DataFrame:
     """One row per pipe with its endpoints, length and midpoint coordinates."""
+    cache = C.PROCESSED / "pipe_table.csv"
+    if cache.exists():
+        return pd.read_csv(cache, index_col=0)
+
     wn = load_model()
     coords = node_coords()
     rows = []
@@ -56,7 +69,10 @@ def pipe_table() -> pd.DataFrame:
                 "y": (coords.at[a, "y"] + coords.at[b, "y"]) / 2,
             }
         )
-    return pd.DataFrame(rows).set_index("pipe")
+    df = pd.DataFrame(rows).set_index("pipe")
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(cache)
+    return df
 
 
 @functools.lru_cache(maxsize=8)
