@@ -856,17 +856,24 @@ def sec_running():
 
     s += [H("The dashboard", 2), P("Four tabs:")]
     s += bullets([
-        "<b>Overview</b> - headline figures and the network map",
-        "<b>Live monitor</b> - the detector's evidence trace against the true onsets, "
-        "plus the residual heatmap",
-        "<b>Leak explorer</b> - choose any leak and watch it be located, with its "
-        "fingerprint compared against simulation",
-        "<b>Evidence &amp; limits</b> - all result tables and the limitations",
+        "<b>Overview</b> - headline figures against current practice, a four-step "
+        "summary of the method, and the pipe network drawn by district",
+        "<b>Year replay</b> - a date slider that moves through the year: leaks appear "
+        "when they start, turn green once the detector flags them, and alarms accumulate "
+        "on the evidence timeline",
+        "<b>Leak explorer</b> - choose any leak and see where the crew would be sent, "
+        "with the network shaded by match strength, the districts ranked, candidate "
+        "pipes and their distance from the real leak, and the fingerprint compared "
+        "against simulation",
+        "<b>Evidence &amp; limits</b> - comparison charts, all result tables and the "
+        "limitations",
     ])
     s += [Spacer(1, 3), P(
         "The sliders re-run the detector live, which is useful for showing how sensitive "
         "the results are to the thresholds. The reported results use the values tuned on "
-        "2018: <b>k = 1.0, h = 4, refractory period 14 days, 12 districts</b>.")]
+        "2018: <b>k = 1.0, h = 4, refractory period 14 days, 12 districts</b>. The "
+        "sidebar confirms when those settings are active, and a "
+        "<b>Reset to reported settings</b> button restores them.")]
     return s
 
 
