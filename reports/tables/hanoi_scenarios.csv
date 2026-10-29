@@ -1,0 +1,11 @@
+scenario,role,rows,leaking_share,n_leaks,leaks
+1,clean,17520,0.0,0,-
+2,clean,17520,0.0,0,-
+3,development,17520,0.373,2,"node 26 (incipient, 36 mm), node 19 (abrupt, 35 mm)"
+4,clean,17520,0.0,0,-
+5,development,17520,0.338,1,"node 21 (incipient, 188 mm)"
+6,development,17520,0.096,1,"node 18 (incipient, 92 mm)"
+7,held-out test,17520,0.018,1,"node 14 (abrupt, 162 mm)"
+8,held-out test,17520,0.282,2,"node 17 (incipient, 81 mm), node 21 (abrupt, 21 mm)"
+9,clean,17520,0.0,0,-
+10,held-out test,17520,0.44,2,"node 28 (abrupt, 192 mm), node 12 (abrupt, 200 mm)"

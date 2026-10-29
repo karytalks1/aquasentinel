@@ -1,0 +1,3 @@
+library_model,n,top1,top3,median_dist_m
+this scenario's own model,5,0.6,0.8,0.0
+another scenario's model (Scenario-1),5,0.6,0.8,0.0

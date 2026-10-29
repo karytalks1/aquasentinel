@@ -1,0 +1,10 @@
+set,scenario,node,kind,diameter_mm,onset,alarm_day,delay_days,detected
+development,3,26,incipient,35.5,2017-03-05,2017-04-06,32,True
+development,3,19,abrupt,34.9,2017-09-22,2017-09-24,2,True
+development,5,21,incipient,188.5,2017-03-15,2017-03-25,10,True
+development,6,18,incipient,92.0,2017-10-04,2017-10-05,1,True
+held-out test,7,14,abrupt,161.7,2017-12-22,2017-12-22,0,True
+held-out test,8,17,incipient,80.7,2017-07-18,2017-07-18,0,True
+held-out test,8,21,abrupt,21.4,2017-08-16,2017-08-18,2,True
+held-out test,10,28,abrupt,191.7,2017-05-22,2017-05-22,0,True
+held-out test,10,12,abrupt,199.5,2017-11-06,2017-11-24,18,True

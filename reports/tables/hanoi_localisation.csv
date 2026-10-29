@@ -1,0 +1,10 @@
+scenario,true_node,kind,diameter_mm,pred_node,rank,top1,top3,dist_m,n_candidates
+3,26,incipient,35.5,26,1,True,True,0.0,31
+3,19,abrupt,34.9,17,3,False,True,993.1,31
+5,21,incipient,188.5,21,1,True,True,0.0,31
+6,18,incipient,92.0,17,2,False,True,397.4,31
+7,14,abrupt,161.7,12,9,False,False,1086.7,31
+8,17,incipient,80.7,17,1,True,True,0.0,31
+8,21,abrupt,21.4,21,1,True,True,0.0,31
+10,28,abrupt,191.7,29,2,False,True,690.1,31
+10,12,abrupt,199.5,12,1,True,True,0.0,31

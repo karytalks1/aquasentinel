@@ -1,0 +1,4 @@
+set,n,top1,top3,median_rank,median_dist_m,random_top1
+development,4,0.5,1.0,1.5,198.7,0.0323
+held-out test,5,0.6,0.8,1.0,0.0,0.0323
+all,9,0.5556,0.8889,1.0,0.0,0.0323
