@@ -245,3 +245,33 @@ def summary() -> pd.DataFrame:
                                for e in ev) or "-",
         })
     return pd.DataFrame(rows)
+
+
+@functools.lru_cache(maxsize=1)
+def pipe_table() -> pd.DataFrame:
+    """One row per pipe with its endpoints, for drawing the network.
+
+    Cached to CSV so the dashboard can draw the map without running the solver.
+    """
+    cache = PROCESSED / "pipes.csv"
+    if cache.exists():
+        return pd.read_csv(cache, index_col=0)
+
+    import warnings
+    warnings.filterwarnings("ignore")
+    import wntr
+
+    wn = wntr.network.WaterNetworkModel(str(inp_file(CLEAN_SCENARIOS[0])))
+    coords = node_coords()
+    rows = []
+    for name in wn.pipe_name_list:
+        link = wn.get_link(name)
+        a, b = link.start_node_name, link.end_node_name
+        if a not in coords.index or b not in coords.index:
+            continue  # pipe touching the reservoir
+        rows.append({"pipe": name, "start": a, "end": b,
+                     "length_m": float(link.length),
+                     "diameter_m": float(link.diameter)})
+    df = pd.DataFrame(rows).set_index("pipe")
+    df.to_csv(cache)
+    return df
